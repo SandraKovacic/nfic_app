@@ -25,7 +25,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/paragraph.css" />
         <meta name="viewport" content="width=device-width">
-        
+            <meta name="viewport" content="-webkit-width=device-width">
                 
                 <title>NFIC | New Frontiers In Interventional Cardiology</title>
                 </head>
@@ -34,7 +34,7 @@
 
                  
             <div id="one_venue">
-                <a href="venue.html"><div id="back"></div></a>
+                <a href="index.html"><div id="back"></div></a>
                 <div id="top_title_wrap"><div id="nfic_title"></div></div>
                 <div id="top_logo"></div>
             </div>
@@ -44,7 +44,15 @@
 
             <div id="two_map">
                 
-              
+                <script>
+                    $("#btnCallMap").click(function(){
+                                           var url = 'http://maps.google.com/maps?';
+                                           url += 'q=<your location>;';
+                                           url += '&z=15'
+                                           window.location = url;
+                                           });
+                    </script>
+
                                               
                 <div id="map-container">
                     <div id="map"></div>
@@ -55,7 +63,7 @@
                     <div id="venue_4"></div>
                 </div>
                 
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCwJCQ-st8x9jOHzVCYp08CqPrZtHLlbs&sensor=true">"></script>
+                <script src="http://maps.google.se/maps/api/js?sensor=false"></script>
                 <script>
                     (function () {
                      var directionsService = new google.maps.DirectionsService(),
